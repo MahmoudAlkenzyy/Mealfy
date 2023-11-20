@@ -644,3 +644,112 @@ a {
         width: calc(calc(100% - 1.2rem * 2) / 1);
     }
 }
+/* Content Section */
+#content {
+    background-color: var(--color-light);
+}
+#content .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.content-title {
+    width: 100%;
+}
+.content-title h3 {
+    width: 100%;
+    font-weight: 400;
+}
+#content .container .map {
+    width: 100%;
+    min-height: 21rem;
+}
+#content .container iframe {
+    width: 100%;
+    height: 100%;
+}
+#content .content-details {
+    width: 100%;
+    margin: 25px 0;
+}
+#content .content-details ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9375rem;
+}
+#content .content-details ul li {
+    width: calc(calc(100% - 0.9375rem) / 2);
+    background-color: var(--ligt-gray);
+    padding: 25px;
+    color: var(--secondary-color);
+}
+#content .content-details ul li i {
+    background-color: var(--main-color);
+    border-radius: 50%;
+    padding: 15px;
+    color: white;
+}
+#content .content-details .content-details-item {
+    display: flex;
+
+    gap: 0.9375rem;
+    align-items: center;
+}
+#content .content-details .content-details-item h3 {
+    color: var(--gray-color-2);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+#content .content-details .content-details-item p {
+    color: var(--primary-color);
+}
+#content form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.937rem;
+    width: 100%;
+    box-shadow: 0 0 1.875rem #00000014;
+    padding: 20px;
+    justify-content: center;
+    background: var(--ligt-gray);
+}
+#content form .input-group {
+    width: 100%;
+    display: flex;
+    gap: 0.973rem;
+}
+#content form input,
+#content form textarea {
+    width: 100%;
+    padding: 15px;
+    border: var(--secondry-background-color) 2px solid;
+    resize: vertical;
+}
+#content form button {
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 100vh;
+    font-size: 15px;
+    transition: 0.3s background-color;
+}
+#content form button:hover {
+    background-color: var(--main-color-2);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    #content form .input-group {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 767px) {
+    #content .content-details ul li {
+        width: calc(calc(100% - 0.9375rem) / 1);
+    }
+    #content form .input-group {
+        flex-wrap: wrap;
+    }
+}
