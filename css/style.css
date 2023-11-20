@@ -537,3 +537,110 @@ a {
         justify-content: center;
     }
 }
+/*gallery Section*/
+/*!!!gallery Title style grouping with cheafs title !!!!*/
+#gallery {
+    background-color: var(--secondry-background-color);
+}
+.gallery-photos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    max-height: 1100px;
+}
+.gallery-photos .photo {
+    width: calc(calc(100% - 1.8rem * 2) / 3);
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #fff;
+    order: 5;
+}
+.gallery-photos .photo img {
+    margin-bottom: -5px;
+    width: 100%;
+}
+.gallery-photos .photo .gallery-layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    right: 0;
+    color: white;
+    height: 0px;
+    transition: 0.4s;
+    transition-property: height bootom;
+    padding: 15px;
+}
+.gallery-photos .photo .gallery-layer h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.gallery-photos .photo:hover .gallery-layer {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.466);
+    bottom: 0;
+}
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .gallery-photos {
+        max-height: 850px;
+    }
+}
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .gallery-photos .burger {
+        order: 1;
+    }
+    .gallery-photos .fritter {
+        order: 3;
+    }
+    .gallery-photos .slice-pizza {
+        order: 0;
+    }
+    .gallery-photos .pizza-slices {
+        order: 2;
+    }
+    .gallery-photos .burger {
+        order: 1;
+    }
+    .gallery-photos {
+        max-height: 1700px;
+        justify-content: center;
+    }
+    .gallery-photos .photo {
+        gap: 1.2rem;
+        width: calc(calc(100% - 1.2rem * 2) / 2);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gallery-photos .burger {
+        order: 1;
+    }
+    .gallery-photos .fritter {
+        order: 3;
+    }
+    .gallery-photos .slice-pizza {
+        order: 0;
+    }
+    .gallery-photos .pizza-slices {
+        order: 2;
+    }
+    .gallery-photos .burger {
+        order: 1;
+    }
+    .gallery-photos {
+        max-height: fit-content;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .gallery-photos .photo {
+        gap: 1.2rem;
+        width: calc(calc(100% - 1.2rem * 2) / 1);
+    }
+}
