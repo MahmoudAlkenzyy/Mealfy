@@ -76,6 +76,134 @@ a {
     margin: auto;
     padding: 50px 5px;
 }
+/*nav bar section*/
+#nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--ligt-gray);
+    z-index: 99;
+}
+#nav .mode-icon {
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+#nav .icon-bars {
+    display: flex;
+    align-items: center;
+    gap: 0px 20px;
+}
+#nav .icon-bars .bars {
+    font-size: 25px;
+    color: var(--primary-color);
+    display: none;
+}
+#color-mode {
+    display: hidden;
+}
+#nav .sun i {
+    position: absolute;
+}
+#nav .sun {
+    font-size: 25px;
+    color: var(--sun-color);
+    position: absolute;
+}
+#nav .moon i {
+    position: absolute;
+}
+#nav .moon {
+    font-size: 25px;
+    position: absolute;
+    color: var(--moon-color);
+}
+
+#nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5px;
+}
+#nav .container ul {
+    display: flex;
+    gap: 0.3125rem;
+}
+
+#nav .container ul li {
+    color: var(--secondary-color);
+    font-size: 1.0625rem;
+    padding: 5px 15px;
+    position: relative;
+    font-weight: 600;
+}
+#nav .container ul li a::after,
+#nav .container ul li .active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0.9125rem;
+    width: 0px;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: width 0.3s, color 0.3s;
+}
+#nav .container ul li:hover a::after,
+#nav .container ul li:hover a,
+#nav .container ul li .active::after {
+    width: calc(100% - calc(0.9125rem * 2));
+    color: var(--light-black);
+}
+#nav .container h1 {
+    position: relative;
+    color: var(--primary-color);
+}
+#nav .container h1::after {
+    content: '.';
+    color: var(--main-color);
+    position: absolute;
+    font-size: 35px;
+}
+
+.active {
+    color: var(--primary-color);
+}
+.side-bar label {
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    #nav .icon-bars .bars {
+        display: block;
+    }
+    .side-bar {
+        position: fixed;
+        right: var(--side-bar-state);
+        top: 0;
+        height: 100%;
+        z-index: 99;
+        background: var(--ligt-gray);
+        transition: 0.5s right;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+    }
+    .side-bar ul {
+        flex-wrap: wrap;
+    }
+    .side-bar ul li {
+        width: 100%;
+    }
+    .side-bar label {
+        display: block;
+        align-self: flex-end;
+        padding: 15px;
+        font-weight: 600;
+        font-size: 20px;
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+}
 
 /*Home Section*/
 #home {
