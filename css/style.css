@@ -753,3 +753,179 @@ a {
         flex-wrap: wrap;
     }
 }
+
+/*Footer */
+#footer {
+    background: linear-gradient(#0009, #0009),
+        url(../img/textured-metal-background.jpg);
+    background-position: center center;
+    background-size: contain;
+    color: white;
+    box-shadow: 0px -1px 5px #0007;
+}
+#footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}
+#footer .container .footer-part-1 {
+    width: calc(calc(100% - 1.6rem * 2) / 4);
+}
+#footer .container .footer-part-1 .about {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+#footer .container .footer-part-1 .about h2 {
+    font-size: 30px;
+    position: relative;
+}
+#footer .container .footer-part-1 .about h2::after {
+    content: '.';
+    color: var(--main-color);
+    position: absolute;
+    font-size: 30px;
+}
+#footer .container .footer-part-1 .about img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+#footer .container .footer-part-1 p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+#footer .container .footer-part-1 h3 {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 2px #595959 solid;
+}
+#footer .container .footer-part-1 ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+}
+#footer .container .footer-part-1 ul li {
+    font-size: 24px;
+}
+.footer-part-2 {
+    width: calc(calc(100% - 1.8rem * 2) / 2);
+}
+#footer .footer-part-2 h3 {
+    font-size: 1.17rem;
+}
+#footer .footer-part-2 p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#footer .footer-part-2 form {
+    margin: 20px 0;
+    display: flex;
+    gap: 0.653rem;
+}
+#footer .footer-part-2 form input {
+    padding: 10px;
+    flex-grow: 1;
+}
+#footer .footer-part-2 form button {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.356rem;
+    color: white;
+    background-color: var(--main-color);
+    font-size: 16px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+#footer .footer-part-2 form button:hover {
+    background-color: var(--main-color-2);
+    cursor: pointer;
+}
+#footer .footer-part-2 .quick-links h3 {
+    font-size: 1.17rem;
+    text-align: start;
+}
+#footer .footer-part-2 .quick-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.25rem;
+}
+#footer .footer-part-2 .quick-links li {
+    width: calc(calc(100% - 1.25rem) / 2);
+    padding: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+    transition-property: transform background-color;
+}
+#footer .footer-part-2 .quick-links li:hover {
+    transform: translateX(10px);
+    background-color: #222;
+}
+
+#footer .footer-part-3 {
+    width: calc(calc(100% - 1.6rem * 2) / 4);
+}
+#footer .footer-part-3 h3 {
+    font-size: 1.17rem;
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+#footer .footer-part-3 ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#footer .footer-part-3 ul li i {
+    color: var(--main-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer .footer-part-3 ul li i span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    #footer .container .footer-part-1,
+    #footer .container .footer-part-3 {
+        width: calc(calc(100% - 1.6rem * 2) / 2);
+    }
+    #footer .container .footer-part-2 {
+        order: 1;
+    }
+    #footer .container .footer-part- {
+        order: 2;
+    }
+}
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    #footer .container .footer-part-1,
+    #footer .container .footer-part-3 {
+        width: calc(calc(100% - 1.6rem * 2) / 2);
+    }
+    #footer .container .footer-part-2 {
+        order: 1;
+
+        width: calc(calc(100% - 1.6rem * 2) / 1);
+    }
+    #footer .container .footer-part- {
+        order: 2;
+    }
+}
+@media screen and (max-width: 767px) {
+    #footer .container .footer-part-1,
+    #footer .container .footer-part-2,
+    #footer .container .footer-part-3 {
+        width: calc(calc(100% - 1.6rem * 2) / 1);
+    }
+}
